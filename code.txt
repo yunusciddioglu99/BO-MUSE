@@ -1,0 +1,52 @@
+Kleur Oranje:
+
+#include <Adafruit_NeoPixel.h>
+
+#define LED_PIN        3
+#define NUMPIXELS      300
+#define NUM_ACTIVE_PIXELS 300           
+
+Adafruit_NeoPixel strip(NUMPIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  strip.begin();
+
+  // Set first N pixels to orange
+  for (int i = 0; i < NUM_ACTIVE_PIXELS; i++) {
+    strip.setPixelColor(i, strip.Color(0, 255, 0)); // Orange
+  }
+
+  strip.show();
+}
+
+void loop() {
+  // Nothing here — LEDs stay on
+}
+
+
+
+
+Kleur groen:
+
+#include <Adafruit_NeoPixel.h>
+
+#define LED_PIN        3
+#define NUMPIXELS      300
+#define NUM_ACTIVE_PIXELS 300
+
+Adafruit_NeoPixel strip(NUMPIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+void setup() {
+  strip.begin();
+
+  // Set first N pixels to dark green
+  for (int i = 0; i < NUM_ACTIVE_PIXELS; i++) {
+    strip.setPixelColor(i, strip.Color(0, 50, 0)); // Dark green
+  }
+
+  strip.show();
+}
+
+void loop() {
+  // Nothing here — LEDs stay on
+}
